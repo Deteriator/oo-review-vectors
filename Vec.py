@@ -5,6 +5,7 @@ class Vec:
 	 def __init__(self,x,y):
 	 	self.x = x
 	 	self.y = y
+	 	self.__length = math.sqrt(self.x ** 2 + self.y ** 2)
 
 	 def plus(vector):
 	 	newX = self.x += vector.x
@@ -12,12 +13,12 @@ class Vec:
 	 	return Vec(newX,newY)
 
 	 def minus(vector):
-	 	newX = self.x -= vector.x
-	 	newY = self.y -= vector.y
-	 	return Vec(newX,newY)
-
-	 def length:
-        return math.sqrt(math.pow(self.x,2) + math.pow(self.y,2))
+	 	new_x = self.x -= vector.x
+	 	new_y = self.y -= vector.y
+	 	return Vec(new_x,new_y)
+	 @property
+	 def length(self):
+        return self.__length
      
      @staticmethod
      def distance(lst1,lst2):
